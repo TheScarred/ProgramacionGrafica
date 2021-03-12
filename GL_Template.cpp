@@ -94,12 +94,158 @@ int main()
 
 	// Object Config
 	float vertices[]{
-		-0.5f, -0.5f, 0.0f, // Bottom Left
-		0.5f, -0.5f, 0.0f,  // Bottom Right
-		-0.5f, 0.5f, 0.0f,  // Top Left
-		0.5f, 0.5f, 0.0f,	// Top Right
-		0.5, -0.5f, 0.0f,	// Bottom Right
-		-0.5f, 0.5f, 0.0f
+
+		// Shape 1
+		-0.65f, -0.3f, 0.0f,
+		-0.4f, -0.5f, 0.0f, 
+		-0.15f, -0.3f, 0.0f,
+		-0.65f, -0.3f, 0.0f,
+		-0.65f, 0.3f, 0.0f,
+		-0.15f, -0.3f, 0.0f,
+		-0.15f, 0.3f, 0.0f,
+		-0.65f, 0.3f, 0.0f,
+		-0.15f, -0.3f, 0.0f,
+		-0.15f, 0.3f, 0.0f,
+		-0.4f, 0.5f, 0.0f,
+		-0.65f, 0.3f, 0.0f,
+
+		// Triangle Top
+		 0.2f, 0.4f, 0.0f,
+		 0.4f, 0.6f, 0.0f,
+		 0.6f, 0.4f, 0.0f,
+
+		// Triangle Left
+		 0.2f, 0.3f, 0.0f,
+		 0.2f, -0.2f, 0.0f,
+		 0.55f,-0.2f, 0.0f,
+
+		// Triangle Right
+		 0.5f, 0.35f, 0.0f,
+		 0.5f, -0.1f, 0.0f,
+		 0.65f, -0.1f, 0.0f
+	};
+
+	// Castle Config
+	float castle[]
+	{
+		// Ground Base
+		-1.0f, -1.0f, 0.0f,
+		 1.0f, -1.0f, 0.0f,
+		-1.0f, -0.5f, 0.0f,
+		 1.0f, -0.5f, 0.0f,
+		 1.0f, -1.0f, 0.0f,
+		-1.0f, -0.5f, 0.0f,
+
+		// Left Tower
+		-0.85f, -0.5f, 0.0f,
+		-0.85, 0.25f, 0.0f,
+		-0.55f, -0.5f, 0.0f,
+		-0.55f, 0.25f, 0.0f,
+		-0.85f, 0.25f, 0.0f,
+		-0.55f, -0.5f, 0.0f,
+
+		-0.9f, 0.25f, 0.0f,
+		-0.9f, 0.35f, 0.0f,
+		-0.8f, 0.25f, 0.0f,
+		-0.8f, 0.35f, 0.0f,
+		-0.9f, 0.35f, 0.0f,
+		-0.8f, 0.25f, 0.0f,
+
+		-0.75f, 0.25f, 0.0f,
+		-0.75f, 0.35f, 0.0f,
+		-0.65f, 0.25f, 0.0f,
+		-0.65f, 0.35f, 0.0f,
+		-0.75f, 0.35f, 0.0f,
+		-0.65f, 0.25f, 0.0f,
+
+		-0.6f, 0.25f, 0.0f,
+		-0.6f, 0.35f, 0.0f,
+		-0.5f, 0.25f, 0.0f,
+		-0.5f, 0.35f, 0.0f,
+		-0.6f, 0.35f, 0.0f,
+		-0.5f, 0.25f, 0.0f,
+
+		// Right Tower
+		 0.85f, -0.5f, 0.0f,
+		 0.85, 0.25f, 0.0f,
+		 0.55f, -0.5f, 0.0f,
+		 0.55f, 0.25f, 0.0f,
+		 0.85f, 0.25f, 0.0f,
+		 0.55f, -0.5f, 0.0f,
+		 
+		 0.9f, 0.25f, 0.0f,
+		 0.9f, 0.35f, 0.0f,
+		 0.8f, 0.25f, 0.0f,
+		 0.8f, 0.35f, 0.0f,
+		 0.9f, 0.35f, 0.0f,
+		 0.8f, 0.25f, 0.0f,
+		 
+		 0.75f, 0.25f, 0.0f,
+		 0.75f, 0.35f, 0.0f,
+		 0.65f, 0.25f, 0.0f,
+		 0.65f, 0.35f, 0.0f,
+		 0.75f, 0.35f, 0.0f,
+		 0.65f, 0.25f, 0.0f,
+		 
+		 0.6f, 0.25f, 0.0f,
+		 0.6f, 0.35f, 0.0f,
+		 0.5f, 0.25f, 0.0f,
+		 0.5f, 0.35f, 0.0f,
+		 0.6f, 0.35f, 0.0f,
+		 0.5f, 0.25f, 0.0f,
+
+		// Center Base
+		-0.4f, -0.5f, 0.0f,
+		-0.4f, 0.5f, 0.0f,
+		 0.4f, -0.5f, 0.0f,
+		 0.4f, 0.5f, 0.0f,
+		-0.4f, 0.5f, 0.0f,
+		 0.4f, -0.5f, 0.0f,
+
+		-0.5f, 0.5f, 0.0f,
+		-0.5f, 0.7f, 0.0f,
+		-0.3f, 0.5f, 0.0f,
+		-0.3f, 0.7f, 0.0f,
+		-0.5f, 0.7f, 0.0f,
+		-0.3f, 0.5f, 0.0f,
+
+		 0.5f, 0.5f, 0.0f,
+		 0.5f, 0.7f, 0.0f,
+		 0.3f, 0.5f, 0.0f,
+		 0.3f, 0.7f, 0.0f,
+		 0.5f, 0.7f, 0.0f,
+		 0.3f, 0.5f, 0.0f,
+
+	     0.1f, 0.5f, 0.0f,
+		 0.1f, 0.7f, 0.0f,
+		 -0.1f, 0.5f, 0.0f,
+		 -0.1f, 0.7f, 0.0f,
+		 0.1f, 0.7f, 0.0f,
+		 -0.1f, 0.5f, 0.0f,
+
+		 // Left Flag
+		-0.225f, 0.5f, 0.0f,
+		-0.225f, 0.95f, 0.0f,
+		-0.175f, 0.5f, 0.0f,
+		-0.175f, 0.95f, 0.0f,
+		-0.225f, 0.95f, 0.0f,
+		-0.175f, 0.5f, 0.0f,
+
+		-0.175f, 0.95f, 0.0f,
+		-0.05f, 0.9f, 0.0f,
+		-0.175f, 0.85f, 0.0f,
+
+		// Right Flag
+		 0.225f, 0.5f, 0.0f,
+		 0.225f, 0.95f, 0.0f,
+		 0.175f, 0.5f, 0.0f,
+		 0.175f, 0.95f, 0.0f,
+		 0.225f, 0.95f, 0.0f,
+		 0.175f, 0.5f, 0.0f,
+
+		 0.225f, 0.95f, 0.0f,
+		 0.35f, 0.9f, 0.0f,
+		 0.225f, 0.85f, 0.0f,
 	};
 
 	unsigned int VBO, VAO;
@@ -108,7 +254,7 @@ int main()
 	//unificamos
 	glBindVertexArray(VAO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(castle), castle, GL_STATIC_DRAW);
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 
@@ -128,7 +274,7 @@ int main()
 
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glDrawArrays(GL_TRIANGLES, 0, 96);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
